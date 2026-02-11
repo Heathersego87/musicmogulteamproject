@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beginner Piano Lessons | The Music Mogul</title>
+
+  <link rel="icon" type="image/png" href="images/icons/favicon-124.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/lessons.css">
+
+  <meta name="description" content="Fun and colorful beginner piano lessons for kids and new musicians.">
+  <meta name="theme-color" content="#FF6EC7">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-area">
+      <img src="images/music-logo.png" alt="Music Mogul Logo" width="140" height="140" decoding="async">
+      <h1><a href="index.html">The Music Mogul</a></h1>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Beginner Lessons</a></li>
+        <li><a href="setup.html">Student Setup</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="lesson-wrapper">
+
+    <section class="lesson-intro">
+      <h2>Beginner Piano Lessons <span class="metronome-dot" aria-hidden="true"></span></h2>
+      <p>Simple, fun lessons that help you start playing real songs fast.</p>
+
+      <img
+        src="images/lesson-hero.webp"
+        alt="Beginner piano graphic"
+        width="900"
+        height="450"
+        loading="lazy"
+        decoding="async"
+      >
+    </section>
+
+    <section class="lesson-list">
+      <h3>Start Learning:</h3>
+
+      <!-- Checkpoint note: this list will be generated from lessons.json later -->
+      <div class="lesson-controls">
+        <label for="difficulty-filter">Difficulty</label>
+        <select id="difficulty-filter" name="difficulty">
+          <option value="all">All</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <ul class="lesson-cards">
+        <li><a class="lesson-card" href="lesson.html?id=1">🎹 Meet the Keyboard <small>(easy)</small></a></li>
+        <li><a class="lesson-card" href="lesson.html?id=2">🖐️ Finger Numbers <small>(easy)</small></a></li>
+        <li><a class="lesson-card" href="lesson.html?id=3">🎵 Middle C <small>(easy)</small></a></li>
+        <li><a class="lesson-card" href="lesson.html?id=4">✨ First Melody <small>(medium)</small></a></li>
+        <li><a class="lesson-card" href="lesson.html?id=5">⏱️ Rhythm Basics <small>(medium)</small></a></li>
+        <li><a class="lesson-card" href="lesson.html?id=6">🎶 Simple Song Challenge <small>(hard)</small></a></li>
+      </ul>
+
+      <button id="show-easy" aria-label="Show only easy lessons">Show Easy Lessons</button>
+      <ul id="lesson-output"></ul>
+    </section>
+
+    <section class="tip-box">
+      <h3>Need a Practice Tip?</h3>
+      <p id="tip-display">Click the button to get a tip!</p>
+      <button id="tip-btn">Show Tip</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 The Music Mogul • Created by Heather Sego</p>
+  </footer>
+
+  <script type="module" src="scripts/lessons.js"></script>
+</body>
+</html>
