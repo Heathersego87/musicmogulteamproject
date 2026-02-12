@@ -13,3 +13,4 @@ Beginner piano lessons web app for homeschool students.
 - difficulty dropdown filter
 - lesson detail page using URL parameters
 - CSS keyframes animation
+- Free Hands
