@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson | The Music Mogul</title>
+
+  <link rel="icon" type="image/png" href="images/icons/favicon-124.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/lessons.css">
+
+  <meta name="theme-color" content="#FF6EC7">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-area">
+      <img src="images/music-logo.png" alt="Music Mogul Logo" width="140" height="140" decoding="async">
+      <h1><a href="index.html">The Music Mogul</a></h1>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Beginner Lessons</a></li>
+        <li><a href="setup.html">Student Setup</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="lesson-wrapper">
+    <!-- Checkpoint note: later this page will read the URL id and load data from lessons.json -->
+    <section class="lesson-list">
+      <h2 style="text-align:center; font-family:'Fredoka One', cursive; color:#d61a88;">
+        Lesson Detail <span class="metronome-dot" aria-hidden="true"></span>
+      </h2>
+
+      <div class="lesson-cards" style="grid-template-columns: 1fr;">
+        <a class="lesson-card" href="#" aria-label="Lesson title">
+          <strong>Meet the Keyboard</strong>
+          <div><small>(easy)</small></div>
+          <p style="margin-top:0.6rem;">In this lesson you will learn black keys, white keys, and how the keyboard pattern repeats.</p>
+          <ol style="margin-top:0.6rem; padding-left:1.2rem;">
+            <li>Find the group of two black keys.</li>
+            <li>Find the group of three black keys.</li>
+            <li>Locate a C using the two black keys pattern.</li>
+          </ol>
+        </a>
+      </div>
+
+      <div style="text-align:center; margin-top:1.5rem;">
+        <a class="cta-btn" href="lessons.html">Back to Lessons</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 The Music Mogul • Created by Heather Sego</p>
+  </footer>
+
+</body>
+</html>
