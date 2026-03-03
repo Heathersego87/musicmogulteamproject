@@ -38,8 +38,4 @@ if (display && addFiveBtn && resetBtn) {
 
 } else {
   console.warn("Practice tracker elements missing from the page.");
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3b59990850c152bd3178beb8e74dcd6932a8574d
