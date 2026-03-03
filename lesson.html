@@ -42,16 +42,12 @@
       </h2>
 
       <div class="lesson-cards" style="grid-template-columns: 1fr;">
-        <a class="lesson-card" href="#" aria-label="Lesson title">
-          <strong>Meet the Keyboard</strong>
-          <div><small>(easy)</small></div>
-          <p style="margin-top:0.6rem;">In this lesson you will learn black keys, white keys, and how the keyboard pattern repeats.</p>
-          <ol style="margin-top:0.6rem; padding-left:1.2rem;">
-            <li>Find the group of two black keys.</li>
-            <li>Find the group of three black keys.</li>
-            <li>Locate a C using the two black keys pattern.</li>
-          </ol>
-        </a>
+        <div class="lesson-card lesson-detail">
+          <strong id="lesson-title">Loading lesson...</strong>
+          <div><small id="lesson-level"></small></div>
+          <p id="lesson-description" style="margin-top:0.6rem;"></p>
+          <ol id="lesson-steps" style="margin-top:0.6rem; padding-left:1.2rem;"></ol>
+        </div>
       </div>
 
       <div style="text-align:center; margin-top:1.5rem;">
@@ -63,7 +59,7 @@
   <footer>
     <p>© 2025 The Music Mogul • Created by Heather Sego</p>
   </footer>
-
+  <script type="module" src="scripts/lessonDetail.js"></script>
 </body>
 <<<<<<< HEAD
 </html>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Meet the Keyboard",
+    "level": "easy",
+    "icon": "🎹",
+    "description": "Learn the black key and white key pattern and how it repeats.",
+    "steps": [
+      "Find the group of two black keys.",
+      "Find the group of three black keys.",
+      "Locate a C using the two black keys pattern."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Finger Numbers",
+    "level": "easy",
+    "icon": "🖐️",
+    "description": "Learn finger numbers 1 to 5 and how to place your hand.",
+    "steps": [
+      "Thumb is 1 and pinky is 5.",
+      "Place your right hand on five white keys.",
+      "Say the numbers as you press each finger."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Middle C",
+    "level": "easy",
+    "icon": "🎵",
+    "description": "Find Middle C and use it as your home base note.",
+    "steps": [
+      "Find a group of two black keys near the center.",
+      "Middle C is the white key just left of those two black keys.",
+      "Play Middle C with finger 1 or 2 depending on your hand."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "First Melody",
+    "level": "medium",
+    "icon": "✨",
+    "description": "Play a simple melody using finger numbers and steady rhythm.",
+    "steps": [
+      "Play hands separately first.",
+      "Go slow and keep the beat steady.",
+      "Repeat until it feels easy."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Rhythm Basics",
+    "level": "medium",
+    "icon": "⏱️",
+    "description": "Learn counts and clapping to build timing.",
+    "steps": [
+      "Clap a steady beat and count 1 2 3 4.",
+      "Clap quarter notes then half notes.",
+      "Tap the rhythm before playing it on keys."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Simple Song Challenge",
+    "level": "hard",
+    "icon": "🎶",
+    "description": "Try a short song and practice small sections.",
+    "steps": [
+      "Pick 2 to 4 measures and repeat.",
+      "Fix mistakes slowly then speed up.",
+      "Play the full song when sections feel clean."
+    ]
+  }
+]

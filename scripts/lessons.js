@@ -1,9 +1,6 @@
 console.log("✔ lessons.js loaded");
 
-// =========================================
-// RANDOM PRACTICE TIP GENERATOR
-// =========================================
-
+// Random practice tip generator
 const tips = [
   "Practice slowly first—speed comes later!",
   "Keep your wrists relaxed while you play.",
@@ -26,43 +23,73 @@ if (tipBtn && tipDisplay) {
     const randomTip = tips[randomIndex];
 
     tipDisplay.textContent = randomTip;
-
-    tipDisplay.style.color =
-      randomTip.length > 45 ? "#FF6EC7" : "#4A90E2";
+    tipDisplay.style.color = randomTip.length > 45 ? "#FF6EC7" : "#4A90E2";
   });
 } else {
   console.warn("Tip generator elements missing from the page.");
 }
 
-// =========================================
-// LESSON DATA
-// =========================================
-
-const lessons = [
-  { name: "Meet the Keyboard", level: "easy", id: 1 },
-  { name: "Finger Numbers", level: "easy", id: 2 },
-  { name: "Middle C", level: "easy", id: 3 },
-  { name: "First Melody", level: "medium", id: 4 },
-  { name: "Rhythm Basics", level: "medium", id: 5 },
-  { name: "Simple Song Challenge", level: "hard", id: 6 }
-];
-
-// =========================================
-// EASY LESSON BUTTON OUTPUT
-// =========================================
-
+// Fetch and render lessons
+const difficultyFilter = document.getElementById("difficulty-filter");
+const lessonCardsEl = document.getElementById("lesson-cards");
 const showEasyBtn = document.getElementById("show-easy");
 const lessonOutput = document.getElementById("lesson-output");
 
+let lessons = [];
+
+async function loadLessons() {
+  try {
+    const res = await fetch("data/lessons.json");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    lessons = await res.json();
+  } catch (err) {
+    console.error("Could not load lessons.json:", err);
+    if (lessonCardsEl) {
+      lessonCardsEl.innerHTML = "<li>Could not load lessons. Run Live Server.</li>";
+    }
+  }
+}
+
+function renderLessonCards() {
+  if (!lessonCardsEl) return;
+
+  const selected = difficultyFilter ? difficultyFilter.value : "all";
+
+  const filtered =
+    selected === "all"
+      ? lessons
+      : lessons.filter((lesson) => lesson.level === selected);
+
+  lessonCardsEl.innerHTML = filtered
+    .map(
+      (lesson) => `
+        <li>
+          <a class="lesson-card" href="lesson.html?id=${lesson.id}">
+            ${lesson.icon} ${lesson.title} <small>(${lesson.level})</small>
+          </a>
+        </li>
+      `
+    )
+    .join("");
+}
+
+if (difficultyFilter) {
+  difficultyFilter.addEventListener("change", renderLessonCards);
+}
+
 if (showEasyBtn && lessonOutput) {
   showEasyBtn.addEventListener("click", () => {
-    const easyLessons = lessons.filter((lesson) => lesson.level === "easy");
+    if (difficultyFilter) {
+      difficultyFilter.value = "easy";
+      renderLessonCards();
+    }
 
+    const easyLessons = lessons.filter((lesson) => lesson.level === "easy");
     lessonOutput.innerHTML = "";
 
     easyLessons.forEach((lesson) => {
       const li = document.createElement("li");
-      li.innerHTML = `<a href="lesson.html?id=${lesson.id}">${lesson.name}</a>`;
+      li.innerHTML = `<a href="lesson.html?id=${lesson.id}">${lesson.title}</a>`;
       lessonOutput.appendChild(li);
     });
   });
@@ -70,35 +97,12 @@ if (showEasyBtn && lessonOutput) {
   console.warn("Lesson filter elements missing from the page.");
 }
 
-// =========================================
-// DROPDOWN FILTER (Difficulty)
-// =========================================
-
-const difficultyFilter = document.getElementById("difficulty-filter");
-const lessonCards = Array.from(document.querySelectorAll(".lesson-cards li"));
-
-function applyDifficultyFilter() {
-  if (!difficultyFilter) return;
-
-  const selected = difficultyFilter.value;
-
-  lessonCards.forEach((li) => {
-    const text = li.textContent.toLowerCase();
-
-    const isEasy = text.includes("(easy)");
-    const isMedium = text.includes("(medium)");
-    const isHard = text.includes("(hard)");
-
-    let show = true;
-
-    if (selected === "easy") show = isEasy;
-    if (selected === "medium") show = isMedium;
-    if (selected === "hard") show = isHard;
-
-    li.style.display = show ? "list-item" : "none";
-  });
+async function init() {
+  await loadLessons();
+  renderLessonCards();
 }
 
+<<<<<<< HEAD
 if (difficultyFilter) {
   difficultyFilter.addEventListener("change", applyDifficultyFilter);
 <<<<<<< HEAD
@@ -106,3 +110,6 @@ if (difficultyFilter) {
 =======
 }
 >>>>>>> 3b59990850c152bd3178beb8e74dcd6932a8574d
+=======
+init();
+>>>>>>> 425cc6d72cbcd230029a324483dd5613fc570a93
