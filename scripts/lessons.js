@@ -101,4 +101,8 @@ function applyDifficultyFilter() {
 
 if (difficultyFilter) {
   difficultyFilter.addEventListener("change", applyDifficultyFilter);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3b59990850c152bd3178beb8e74dcd6932a8574d
