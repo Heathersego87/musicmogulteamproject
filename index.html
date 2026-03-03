@@ -1,25 +1,30 @@
-<<<<<<< HEAD
-/* Temporary Index Until AShley is done with the real one */
-
 <!DOCTYPE html>
-=======
- /* Temporary Index Until AShley is done with the real one */
-
- <!DOCTYPE html>
->>>>>>> 425cc6d72cbcd230029a324483dd5613fc570a93
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Music Mogul</title>
-  <link rel="icon" type="image/png" href="images/icons/favicon-124.png">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" 
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Meta -->
+  <meta name="description" content="The Music Mogul — Fun, begiiner-friendly piano lessons for kids, teens, and homeschool families. Learn piano through colorful visuals, tips, and interactive tools.">
+  <meta name="theme-color" content="#FF6EC7">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/icons/favicon-124.png">
 </head>
+
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="logo-area">
       <img src="images/music-logo.png" alt="Music Mogul Logo" width="140" height="140" decoding="async">
@@ -34,23 +39,70 @@
     </nav>
   </header>
 
-  <main class="lesson-wrapper">
-    <section class="lesson-list">
-      <h2 style="text-align:center; font-family:'Fredoka One', cursive; color:#d61a88;">
-        Home page in progress
-      </h2>
-      <p style="text-align:center; margin-top: 1rem;">
-        Ashley is currently building the full home page layout. For now, start on the lessons page.
-      </p>
-      <div style="text-align:center; margin-top: 1.5rem;">
-        <a class="cta-btn" href="lessons.html">Go to Lessons</a>
-      </div>
-    </section>
-  </main>
+  <!-- MAIN CONTENT WRAPPER -->
+  <main>
 
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h2>Learn Piano the Fun & Easy Way!</h2>
+        <p>Colorful. Playful. Beginner-friendly lessons that help you learn faster with the power of AI.</p>
+        <img
+            src="images/lesson-hero.webp"
+            alt="Colorful piano lessons graphic"
+            width="800"
+            height="500"
+            fetchpriority="high"
+            decoding="async"
+            class="hero-img"
+        />
+        <a class="cta-btn" href="lessons.html">Start Learning</a>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2>Why You'll Love It</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                🎹
+                <h3>Fun Beginner Lessons</h3>
+                <p>Simple and colorful steps perfect for first-time players.</p>
+            </div>
+            <div class="feature-box">
+                ✨
+                <h3>AI-Powered Learning</h3>
+                <p>Our app (coming soon!) teaches you with animations and smart tips.</p>
+            </div>
+            <div class="feature-box">
+                📈
+                <h3>Track Your Progress</h3>
+                <p>Watch your skills grow with our practice tracker.</p>
+            </div>
+            <div class="feature-box">
+                🎵
+                <h3>Free Songs & Sheet Music</h3>
+                <p>Play real songs from day one with easy sheet music.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRACTICE TRACKER -->
+    <section class="tracker">
+        <h2>Practice Tracker</h2>
+        <p id="practice-display">You've practiced <strong>0</strong> minutes today!</p>
+        <button id="add-5">Add 5 Minutes</button>
+        <button id="reset">Reset</button>
+    </section>
+
+  </main>
+  <!-- END MAIN -->
+
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 The Music Mogul • Created by Heather Sego</p>
   </footer>
+
+  <!-- JS -->
+  <script type="module" src="scripts/main.js"></script>
 
 </body>
 </html>
