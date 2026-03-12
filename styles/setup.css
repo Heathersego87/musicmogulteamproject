@@ -402,14 +402,14 @@ textarea {
 .question:hover p,
 .question label:hover,
 input:hover::placeholder {
-    color: #53c621;
+    color: #4eb820;
 }
 .item input:hover,
 .item select:hover,
 .item textarea:hover {
     border: 1px solid transparent;
-    box-shadow: 0 0 3px 0 #006622;
-    color: #7ED957;
+    box-shadow: 0 0 3px 0 #076326;
+    color: #000000;
 }
 .item {
     position: relative;
