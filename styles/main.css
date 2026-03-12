@@ -24,7 +24,7 @@ p, li {
 =================================== */
 
 header {
-  background-color: #ff5abf; /* improved contrast */
+  background-color: hsl(321, 100%, 69%); /* improved contrast */
   padding: 1.5rem;
   color: #f3f3f3;
 }
@@ -75,7 +75,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
   color: #ffffff;
-  background-color: #0066cc;
+  background-color: #e22e9d;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   transition: 0.3s ease;
@@ -100,7 +100,7 @@ nav {
 .hero h2 {
   font-family: 'Fredoka One', cursive;
   font-size: 2.5rem;
-  color: #d61a88;
+  color: #d21182;
   text-align: center;
 }
 
@@ -114,7 +114,7 @@ nav {
 .cta-btn {
   display: block;
   margin: 2rem auto 0;
-  background-color: #d61a88;
+  background-color: #ec2c9c;
   color: #ffffff;
   padding: 0.8rem 2rem;
   font-size: 1.2rem;
@@ -139,7 +139,7 @@ nav {
 
 .features h2 {
   font-family: 'Fredoka One', cursive;
-  color: #0066cc;
+  color: #0aa1ff;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -155,7 +155,7 @@ nav {
 
 .feature-box {
   background: #ffffff;
-  border: 3px solid #ff5abf;
+  border: 3px solid #47d283;
   border-radius: 20px;
   padding: 1.5rem;
   font-size: 1.1rem;
@@ -163,7 +163,7 @@ nav {
 }
 
 .feature-box h3 {
-  color: #d61a88;
+  color: #d7409d;
   margin: 0.5rem 0;
   text-align: center;
 }
@@ -200,7 +200,7 @@ nav {
 }
 
 button {
-  background-color: #0066cc;
+  background-color: #0aa1ff;
   color: #ffffff;
   font-size: 1rem;
   padding: 0.8rem 1.4rem;
