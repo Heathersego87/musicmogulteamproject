@@ -1,4 +1,5 @@
 console.log("✔ lessons.js loaded");
+const STORAGE_KEY_DIFFICULTY = "mm_difficulty";
 
 // Random practice tip generator
 const tips = [
@@ -31,6 +32,9 @@ if (tipBtn && tipDisplay) {
 
 // Fetch and render lessons
 const difficultyFilter = document.getElementById("difficulty-filter");
+// Load saved dropdown choice on page load
+const saved = localStorage.getItem(STORAGE_KEY_DIFFICULTY);
+if (saved) difficultyFilter.value = saved;
 const lessonCardsEl = document.getElementById("lesson-cards");
 const showEasyBtn = document.getElementById("show-easy");
 const lessonOutput = document.getElementById("lesson-output");
@@ -74,7 +78,10 @@ function renderLessonCards() {
 }
 
 if (difficultyFilter) {
-  difficultyFilter.addEventListener("change", renderLessonCards);
+  difficultyFilter.addEventListener("change", () => {
+    localStorage.setItem(STORAGE_KEY_DIFFICULTY, difficultyFilter.value);
+    renderLessonCards();
+  });
 }
 
 if (showEasyBtn && lessonOutput) {
