@@ -24,7 +24,7 @@ p, li {
 =================================== */
 
 header {
-  background-color: hsl(321, 100%, 69%); /* improved contrast */
+  background-color: hsl(321, 78%, 75%); /* improved contrast */
   padding: 1.5rem;
   color: #f3f3f3;
 }
@@ -55,7 +55,7 @@ header h1 a {
 
 header h1 a:hover {
   opacity: 0.85;
-  color: #7ED957;
+  color: #8ac770;
 }
 
 /* NAVIGATION */
@@ -75,7 +75,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
   color: #ffffff;
-  background-color: #e22e9d;
+  background-color: #d960ab;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   transition: 0.3s ease;
@@ -83,7 +83,7 @@ nav {
 }
 
 .nav-links a:hover {
-  background-color: #7ED957;
+  background-color: #8ac770;
   color: #333;
 }
 
