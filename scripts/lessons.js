@@ -1,3 +1,5 @@
+import { loadLessons } from "./dataService.js";
+import { loadDifficulty, saveDifficulty } from "./storage.js";
 console.log("✔ lessons.js loaded");
 
 // Random practice tip generator
@@ -31,24 +33,17 @@ if (tipBtn && tipDisplay) {
 
 // Fetch and render lessons
 const difficultyFilter = document.getElementById("difficulty-filter");
+// Load saved dropdown choice on page load
+difficultyFilter.value = loadDifficulty("all");
+difficultyFilter.addEventListener("change", () => {
+  saveDifficulty(difficultyFilter.value);
+  renderLessonCards();
+});
 const lessonCardsEl = document.getElementById("lesson-cards");
 const showEasyBtn = document.getElementById("show-easy");
 const lessonOutput = document.getElementById("lesson-output");
 
 let lessons = [];
-
-async function loadLessons() {
-  try {
-    const res = await fetch("data/lessons.json");
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    lessons = await res.json();
-  } catch (err) {
-    console.error("Could not load lessons.json:", err);
-    if (lessonCardsEl) {
-      lessonCardsEl.innerHTML = "<li>Could not load lessons. Run Live Server.</li>";
-    }
-  }
-}
 
 function renderLessonCards() {
   if (!lessonCardsEl) return;
@@ -73,14 +68,11 @@ function renderLessonCards() {
     .join("");
 }
 
-if (difficultyFilter) {
-  difficultyFilter.addEventListener("change", renderLessonCards);
-}
-
 if (showEasyBtn && lessonOutput) {
   showEasyBtn.addEventListener("click", () => {
     if (difficultyFilter) {
       difficultyFilter.value = "easy";
+      saveDifficulty("easy");
       renderLessonCards();
     }
 
@@ -98,7 +90,7 @@ if (showEasyBtn && lessonOutput) {
 }
 
 async function init() {
-  await loadLessons();
+  lessons = await loadLessons();
   renderLessonCards();
 }
 
