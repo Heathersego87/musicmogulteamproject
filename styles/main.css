@@ -272,13 +272,13 @@ footer p {
   background: #fdf8ff;
   padding: 2rem;
   border-radius: 20px;
-  border: 3px solid #7ED957;
+  border: 3px solid #80d173;
   margin-bottom: 2.5rem;
 }
 
 .lesson-list h3 {
   font-family: 'Fredoka One', cursive;
-  color: #2f8a1f; 
+  color: #189225; 
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -332,4 +332,8 @@ button:focus {
     height: auto;
     object-fit: cover;
   }
+  .logo-area img {
+    height: auto;
+    object-fit: cover;
+}
 }

@@ -1,4 +1,4 @@
-console.log("✔ lessonDetail.js loaded");
+console.log("✔ LessonDetail.js loaded");
 
 function getLessonIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
