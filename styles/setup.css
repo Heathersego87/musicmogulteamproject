@@ -48,9 +48,9 @@ header h1 {
 }
 
 header h1 a {
-  color: #f3f3f3;
+  color: #191919;
   text-decoration: none;
-  text-shadow: 0 0 3px rgba(0,0,0,0.25);
+  text-shadow: 0 0 6px rgba(31, 64, 210, 0.685);
 }
 
 header h1 a:hover {
