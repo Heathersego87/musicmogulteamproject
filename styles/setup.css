@@ -75,7 +75,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
   color: #ffffff;
-  background-color: #d960ab;
+  background-color: #d74c9d;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   transition: 0.3s ease;
@@ -100,7 +100,7 @@ nav {
 .hero h2 {
   font-family: 'Fredoka One', cursive;
   font-size: 2.5rem;
-  color: #d21182;
+  color: #d43693;
   text-align: center;
 }
 
@@ -139,7 +139,7 @@ nav {
 
 .features h2 {
   font-family: 'Fredoka One', cursive;
-  color: #0aa1ff;
+  color: #3a66df;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -333,6 +333,10 @@ button:focus {
     height: auto;
     object-fit: cover;
   }
+  .logo-area img {
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 
@@ -485,13 +489,13 @@ button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: #3a831b;
+    background: #337318;
     font-size: 16px;
     color: #fff;
     cursor: pointer;
 }
 button:hover {
-    background: #60c934;
+    background: #5ece3d;
 }
 /* Example CSS for the participants fieldset and button */
 #participants {
