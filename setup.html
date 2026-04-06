@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Music Mogul</title>
+  <title>The Music Mogul | Student Setup</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap" 
-        rel="stylesheet" media="print" onload="this.media='all'">
-
+  <link 
+    href="https://fonts.googleapis.com/css2? family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  >
   <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/setup.css">
 
   <!-- Meta -->
-  <meta name="description" content="The Music Mogul — Fun, begiiner-friendly piano lessons for kids, teens, and homeschool families. Learn piano through colorful visuals, tips, and interactive tools.">
+  <meta 
+    name="description" 
+    content="The Music Mogul student setup page. Create a student profile and get started with beginner piano lessons."
+  >
   <meta name="theme-color" content="#FF6EC7">
 
   <!-- Favicon -->
@@ -26,14 +33,25 @@
   <!-- HEADER -->
   <header>
     <div class="logo-area">
-      <img src="images/music-logo.png" alt="Music Mogul Logo" width="140" height="140" decoding="async">
+      <img 
+        src="images/music-logo.png" 
+        alt="Music Mogul Logo" 
+        width="140" 
+        height="140" 
+        decoding="async"
+      >
       <h1><a href="index.html">The Music Mogul</a></h1>
     </div>
-    <nav>
+
+    <button id="menuButton" class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+       ☰ Menu
+    </button>
+
+    <nav id="siteNav">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="lessons.html">Beginner Lessons</a></li>
-        <li><a href="setup.html">Student Setup</a></li>
+        <li><a href="setup.html" aria-current="page">Student Setup</a></li>
       </ul>
     </nav>
   </header>
@@ -49,36 +67,42 @@
     <!-- FEATURES -->
     <section class="features">
       <h2>Student Info</h2>
+
       <div class="testbox">
-        <form>
+        <form id="studentForm" novalidate>
           <fieldset class="participants">
             <section class="participant1">
               <div class="item">
                 <label for="fname">Name<span>*</span></label>
-                <input id="fname" type="text" name="fname" value="" required />
+                <input id="fname" type="text" name="fname" required>
+                <p class="error-message" id="fnameError"></p>
               </div>
+
               <div class="item">
-                <p>Skill Level</p>
-                  <select>
-                    <option selected value="" disabled selected></option>
-                    <option value="1">Beginner</option>
-                    <option value="2">Intermediate</option>
-                    <option value="3">Advanced</option>
-                  </select>
+                <label for="skillLevel">Skill Level <span>*</span></label>
+                <select id="skillLevel" name="skillLevel" required>
+                  <option value="">Select a level</option>
+                  <option value="Beginner">Beginner</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Advanced">Advanced</option>
+                </select>
+                <p class="error-message" id="skillLevelError"></p>
               </div>
               <div class="item">
                 <label for="eaddress">Email Address<span>*</span></label>
-                <input id="eaddress" type="text" name="eaddress" />
+                <input id="eaddress" type="email" name="eaddress" />
+                <p class="error-message" id="eaddressError"></p>
               </div>
             </section>
             <div class="btn-block">
              <button type="submit" id="submitButton">Submit</button>
             </div>
+
+            <p id="formSuccess" class="success-message" aria-live="polite"></p>
           </fieldset>
         </form>
       </div>
     </section>
-
   </main>
   <!-- END MAIN -->
 
@@ -88,7 +112,7 @@
   </footer>
 
   <!-- JS -->
+  <script type="module" src="scripts/main.js"></script>
   <script type="module" src="scripts/setup.js"></script>
-
 </body>
 </html>

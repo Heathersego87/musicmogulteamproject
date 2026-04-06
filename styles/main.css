@@ -15,7 +15,8 @@ body {
   line-height: 1.6;
 }
 
-p, li {
+p, 
+li {
   text-align: left;
 }
 
@@ -25,6 +26,7 @@ p, li {
 
 header {
   background-color: hsl(321, 78%, 75%); /* improved contrast */
+  background-color: hsl(321, 100%, 69%);
   padding: 1.5rem;
   color: #f3f3f3;
 }
@@ -51,6 +53,7 @@ header h1 a {
   color: #191919;
   text-decoration: none;
   text-shadow: 0 0 6px rgba(31, 64, 210, 0.685);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
 }
 
 header h1 a:hover {
@@ -58,7 +61,20 @@ header h1 a:hover {
 }
 
 /* NAVIGATION */
-nav {
+.menu-button {
+  display: none;
+  background-color: #2f8a1f;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1rem auto 0;
+}
+
+#siteNav {
+  display: block;
   margin-top: 1rem;
 }
 
@@ -78,7 +94,8 @@ nav {
   padding: 0.4rem 1rem;
   border-radius: 20px;
   transition: 0.3s ease;
-  text-shadow: 0 0 3px rgba(0,0,0,0.25);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  display: inline-block;
 }
 
 .nav-links a:hover {
@@ -279,6 +296,7 @@ footer p {
 .lesson-list h3 {
   font-family: 'Fredoka One', cursive;
   color: #189225; 
+  color: #2f8a1f;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -296,7 +314,7 @@ footer p {
   text-align: left;
 }
 
-/* Focus Styles */
+/* FOCUS STYLES */
 a:focus,
 button:focus {
   outline: 3px solid #0066cc;
@@ -304,6 +322,7 @@ button:focus {
 }
 
 /* HERO IMAGE */
+
 .hero-img {
   width: 100%;
   max-width: 700px;
@@ -320,9 +339,34 @@ button:focus {
    MOBILE RESPONSIVE
 =================================== */
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+  header {
+    text-align: center;
+  }
   header img {
     width: 90px;
+  }
+
+  .menu-button {
+    display: block !important;
+    margin: 1rem auto 0;
+  }
+
+  #siteNav {
+    display: none;
+    width: 100%;
+  }
+
+  #siteNav.open {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   .hero h2 {
@@ -335,5 +379,22 @@ button:focus {
   .logo-area img {
     height: auto;
     object-fit: cover;
+  }
+}
+
+@media (min-width: 701px) {
+  .menu-button {
+    display: none !important;
+  }
+
+  #siteNav {
+    display: block !important;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
