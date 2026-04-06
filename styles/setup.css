@@ -24,7 +24,7 @@ p, li {
 =================================== */
 
 header {
-  background-color: hsl(321, 78%, 75%); /* improved contrast */
+  background-color: #F596CA; /* improved contrast */
   padding: 1.5rem;
   color: #f3f3f3;
 }
@@ -49,8 +49,9 @@ header h1 {
 
 header h1 a {
   color: #191919;
-  text-decoration: none;
-  text-shadow: 0 0 6px rgba(31, 64, 210, 0.685);
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 header h1 a:hover {
@@ -59,7 +60,20 @@ header h1 a:hover {
 }
 
 /* NAVIGATION */
-nav {
+.menu-button {
+  display: none;
+  background-color: #60E067;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1rem auto 0;
+}
+
+#siteNav {
+  display: block;
   margin-top: 1rem;
 }
 
@@ -75,7 +89,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
   color: #ffffff;
-  background-color: #d74c9d;
+  background-color: #3BA1F0;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   transition: 0.3s ease;
@@ -83,7 +97,7 @@ nav {
 }
 
 .nav-links a:hover {
-  background-color: #8ac770;
+  background-color: #60E067;
   color: #333;
 }
 
@@ -100,7 +114,7 @@ nav {
 .hero h2 {
   font-family: 'Fredoka One', cursive;
   font-size: 2.5rem;
-  color: #d43693;
+  color: #dc2992;
   text-align: center;
 }
 
@@ -114,7 +128,7 @@ nav {
 .cta-btn {
   display: block;
   margin: 2rem auto 0;
-  background-color: #ec2c9c;
+  background-color: #F596CA;
   color: #ffffff;
   padding: 0.8rem 2rem;
   font-size: 1.2rem;
@@ -125,7 +139,7 @@ nav {
 }
 
 .cta-btn:hover {
-  background-color: #7ED957;
+  background-color: #60E067;
   color: #333;
 }
 
@@ -170,7 +184,7 @@ nav {
 
 .feature-box:hover {
   transform: scale(1.05);
-  border-color: #7ED957;
+  border-color: #60E067;
 }
 
 /* ================================
@@ -222,7 +236,7 @@ button:hover {
 
 footer p {
   padding: 2rem;
-  background-color: #0066cc;
+  background-color: #2274c2;
   color: #ffffff;
   margin-top: 3rem;
   font-size: 1rem;
@@ -241,7 +255,7 @@ footer p {
 
 .lesson-intro h2 {
   font-family: 'Fredoka One', cursive;
-  color: #d61a88;
+  color: #da3ca5;
   font-size: 2.2rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -374,7 +388,7 @@ form {
     padding: 20px;
     border-radius: 6px;
     background: #fff;
-    box-shadow: 0 0 8px #a10099;
+    box-shadow: 0 0 8px #af05a7;
 }
 fieldset {
     margin-bottom: 2em;
@@ -489,13 +503,13 @@ button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: #337318;
+    background: #459821;
     font-size: 16px;
     color: #fff;
     cursor: pointer;
 }
 button:hover {
-    background: #5ece3d;
+    background: #60E067;
 }
 /* Example CSS for the participants fieldset and button */
 #participants {
