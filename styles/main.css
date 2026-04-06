@@ -16,6 +16,7 @@ body {
 }
 
 p, 
+p,
 li {
   text-align: left;
 }
@@ -25,7 +26,9 @@ li {
 =================================== */
 
 header {
+
   background-color: hsl(321, 78%, 75%); /* improved contrast */
+  background-color: hsl(321, 100%, 69%);
   background-color: hsl(321, 100%, 69%);
   padding: 1.5rem;
   color: #f3f3f3;
@@ -334,7 +337,6 @@ button:focus {
   margin-bottom: 2rem;
 }
 
-
 /* ================================
    MOBILE RESPONSIVE
 =================================== */
@@ -343,6 +345,7 @@ button:focus {
   header {
     text-align: center;
   }
+
   header img {
     width: 90px;
   }
@@ -372,6 +375,7 @@ button:focus {
   .hero h2 {
     font-size: 2rem;
   }
+
   .hero-img {
     height: auto;
     object-fit: cover;

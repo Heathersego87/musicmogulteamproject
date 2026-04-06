@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Music Mogul | Student Setup</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
@@ -25,12 +24,10 @@
   >
   <meta name="theme-color" content="#FF6EC7">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/icons/favicon-124.png">
 </head>
 
 <body>
-  <!-- HEADER -->
   <header>
     <div class="logo-area">
       <img 
@@ -56,15 +53,11 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT WRAPPER -->
   <main>
-
-    <!-- HERO SECTION -->
     <section class="hero">
-        <h2>Student Profile</h2>
+      <h2>Student Profile</h2>
     </section>
 
-    <!-- FEATURES -->
     <section class="features">
       <h2>Student Info</h2>
 
@@ -74,6 +67,7 @@
             <section class="participant1">
               <div class="item">
                 <label for="fname">Name<span>*</span></label>
+                <label for="fname">Name <span>*</span></label>
                 <input id="fname" type="text" name="fname" required>
                 <p class="error-message" id="fnameError"></p>
               </div>
@@ -88,14 +82,18 @@
                 </select>
                 <p class="error-message" id="skillLevelError"></p>
               </div>
+
               <div class="item">
                 <label for="eaddress">Email Address<span>*</span></label>
                 <input id="eaddress" type="email" name="eaddress" />
+                <label for="eaddress">Email Address <span>*</span></label>
+                <input id="eaddress" type="email" name="eaddress" required>
                 <p class="error-message" id="eaddressError"></p>
               </div>
             </section>
+
             <div class="btn-block">
-             <button type="submit" id="submitButton">Submit</button>
+              <button type="submit" id="submitButton">Submit</button>
             </div>
 
             <p id="formSuccess" class="success-message" aria-live="polite"></p>
@@ -104,9 +102,7 @@
       </div>
     </section>
   </main>
-  <!-- END MAIN -->
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2026 The Music Mogul • Created by Heather Sego and Ashley Bradshaw</p>
   </footer>
